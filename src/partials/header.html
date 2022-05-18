@@ -1,6 +1,6 @@
 <header class="header container">
-    <ul class="header__list">
-        <div class="logo"></div>
+    <div class="header__container ">
+        <include src="./partials/logo.html"></include>
         <nav class="navigation">
             <ul class="nav__list">
                 <li class="nav__item"><a href="" class="nav__link">studying program</a></li>
@@ -9,6 +9,15 @@
                 <li class="nav__item"><a href="" class="nav__link">contacts</a></li>
             </ul>
         </nav>
-        <div class="header__consultation"><a href="" class="header__consultation-link">consultation by phone</a></div>
-    </ul>
+        <div class="header__wraper">
+            <div class="header__consultation">
+                <a href="" class="header__consultation-link">consultation by phone</a>
+            </div>
+            <div class="burger__menu">
+                <svg class="burger__icon">
+                    <use href="./images/temp/sprite.svg#icon-menu"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
 </header>
