@@ -1,18 +1,20 @@
 .logo {
 
-    
+    font-family: $main-font;
     color: $dark-colorFont;
-    width: 155px;
-    height: 45px;
-    
+    max-width: 90px;
+    letter-spacing: 0.04em;
+
     &__link {
         display: inline-flex;
         flex-wrap: wrap;
+        align-items: flex-end;
+        font-family: $main-font;
         color: $dark-colorFont;
-        text-transform: uppercase;
+        text-transform: capitalize;
         font-weight: 700;
-        font-size: 26px;
-        line-height: 32px;
+        font-size: 14px;
+        line-height: 1.25;
         letter-spacing: 0.04em;
 
         &:hover {
@@ -21,26 +23,67 @@
     }
 
     &__element {
-        text-shadow: 0px 4px 4px #00000040;
+        text-transform: uppercase;
 
     }
 
     &__icon {
         fill: $main-color;
-        width: 22px;
-        height: 30px;
+        width: 14px;
+        height: 20px;
+        margin: 0px 5px;
     }
 
     &__undertitle {
         font-weight: 700;
-        font-size: 8px;
+        font-size: 5px;
         line-height: 1.25;
         letter-spacing: 0.18em;
-        text-shadow: 0px 4px 4px #00000040;
+        text-transform: uppercase;
+
 
     }
 
     &__accent {
         color: $main-color;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .logo {
+        
+        max-width: 155px;
+
+        &__link {
+            align-items: center;
+            font-weight: 800;
+            font-size: 26px;
+        }
+
+        &__undertitle {
+            font-size: 8px;
+        }
+        &__icon{
+            width: 22px;
+            height: 30px;
+        }
+    }
+
+}
+
+@media screen and (min-width:1280px) {
+    .logo {
+        &__link {
+            -webkit-text-stroke: 1px black;
+        }
+
+        &__element,
+        &__undertitle {
+            text-shadow: 0px 4px 4px #00000040;
+        }
+
+        &__undertitle {
+            -webkit-text-stroke: 0px;
+        }
     }
 }
